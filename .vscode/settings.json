@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "ProgramADAs.sln"
+    "dotnet.defaultSolution": "ProgramADAs.slnx"
 }

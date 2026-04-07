@@ -491,20 +491,20 @@ namespace TMPro.Examples
 
             // Restore UV0S
             // UVS0
-            Vector2[] src_uv0s = m_cachedMeshInfoVertexData[materialIndex].uvs0;
-            Vector2[] dst_uv0s = m_TextMeshPro.textInfo.meshInfo[materialIndex].uvs0;
-            dst_uv0s[vertexIndex + 0] = src_uv0s[vertexIndex + 0];
-            dst_uv0s[vertexIndex + 1] = src_uv0s[vertexIndex + 1];
-            dst_uv0s[vertexIndex + 2] = src_uv0s[vertexIndex + 2];
-            dst_uv0s[vertexIndex + 3] = src_uv0s[vertexIndex + 3];
+            Vector4[] src_uv0s = m_cachedMeshInfoVertexData[materialIndex].uvs0;
+            Vector4[] dst_uv0s = m_TextMeshPro.textInfo.meshInfo[materialIndex].uvs0;
+            dst_uv0s[vertexIndex + 0] = new Vector4(src_uv0s[vertexIndex + 0].x, src_uv0s[vertexIndex + 0].y, 0, 0);
+            dst_uv0s[vertexIndex + 1] = new Vector4(src_uv0s[vertexIndex + 1].x, src_uv0s[vertexIndex + 1].y, 0, 0);
+            dst_uv0s[vertexIndex + 2] = new Vector4(src_uv0s[vertexIndex + 2].x, src_uv0s[vertexIndex + 2].y, 0, 0);
+            dst_uv0s[vertexIndex + 3] = new Vector4(src_uv0s[vertexIndex + 3].x, src_uv0s[vertexIndex + 3].y, 0, 0);
 
             // UVS2
             Vector2[] src_uv2s = m_cachedMeshInfoVertexData[materialIndex].uvs2;
             Vector2[] dst_uv2s = m_TextMeshPro.textInfo.meshInfo[materialIndex].uvs2;
-            dst_uv2s[vertexIndex + 0] = src_uv2s[vertexIndex + 0];
-            dst_uv2s[vertexIndex + 1] = src_uv2s[vertexIndex + 1];
-            dst_uv2s[vertexIndex + 2] = src_uv2s[vertexIndex + 2];
-            dst_uv2s[vertexIndex + 3] = src_uv2s[vertexIndex + 3];
+            dst_uv2s[vertexIndex + 0] = new Vector4(src_uv2s[vertexIndex + 0].x, src_uv2s[vertexIndex + 0].y, 0, 0);
+            dst_uv2s[vertexIndex + 1] = new Vector4(src_uv2s[vertexIndex + 1].x, src_uv2s[vertexIndex + 1].y, 0, 0);
+            dst_uv2s[vertexIndex + 2] = new Vector4(src_uv2s[vertexIndex + 2].x, src_uv2s[vertexIndex + 2].y, 0, 0);
+            dst_uv2s[vertexIndex + 3] = new Vector4(src_uv2s[vertexIndex + 3].x, src_uv2s[vertexIndex + 3].y, 0, 0);
 
 
             // Restore last vertex attribute as we swapped it as well
@@ -527,18 +527,18 @@ namespace TMPro.Examples
             // UVS0
             src_uv0s = m_cachedMeshInfoVertexData[materialIndex].uvs0;
             dst_uv0s = m_TextMeshPro.textInfo.meshInfo[materialIndex].uvs0;
-            dst_uv0s[lastIndex + 0] = src_uv0s[lastIndex + 0];
-            dst_uv0s[lastIndex + 1] = src_uv0s[lastIndex + 1];
-            dst_uv0s[lastIndex + 2] = src_uv0s[lastIndex + 2];
-            dst_uv0s[lastIndex + 3] = src_uv0s[lastIndex + 3];
+            dst_uv0s[lastIndex + 0] = new Vector4(src_uv0s[lastIndex + 0].x, src_uv0s[lastIndex + 0].y, 0, 0);
+            dst_uv0s[lastIndex + 1] = new Vector4(src_uv0s[lastIndex + 1].x, src_uv0s[lastIndex + 1].y, 0, 0);
+            dst_uv0s[lastIndex + 2] = new Vector4(src_uv0s[lastIndex + 2].x, src_uv0s[lastIndex + 2].y, 0, 0);
+            dst_uv0s[lastIndex + 3] = new Vector4(src_uv0s[lastIndex + 3].x, src_uv0s[lastIndex + 3].y, 0, 0);
 
             // UVS2
             src_uv2s = m_cachedMeshInfoVertexData[materialIndex].uvs2;
             dst_uv2s = m_TextMeshPro.textInfo.meshInfo[materialIndex].uvs2;
-            dst_uv2s[lastIndex + 0] = src_uv2s[lastIndex + 0];
-            dst_uv2s[lastIndex + 1] = src_uv2s[lastIndex + 1];
-            dst_uv2s[lastIndex + 2] = src_uv2s[lastIndex + 2];
-            dst_uv2s[lastIndex + 3] = src_uv2s[lastIndex + 3];
+            dst_uv2s[lastIndex + 0] = new Vector4(src_uv2s[lastIndex + 0].x, src_uv2s[lastIndex + 0].y, 0, 0);
+            dst_uv2s[lastIndex + 1] = new Vector4(src_uv2s[lastIndex + 1].x, src_uv2s[lastIndex + 1].y, 0, 0);
+            dst_uv2s[lastIndex + 2] = new Vector4(src_uv2s[lastIndex + 2].x, src_uv2s[lastIndex + 2].y, 0, 0);
+            dst_uv2s[lastIndex + 3] = new Vector4(src_uv2s[lastIndex + 3].x, src_uv2s[lastIndex + 3].y, 0, 0);
 
             // Need to update the appropriate 
             m_TextMeshPro.UpdateVertexData(TMP_VertexDataUpdateFlags.All);
